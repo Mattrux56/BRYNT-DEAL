@@ -1,0 +1,270 @@
+@media (max-width: 900px) {
+    .navbar {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .pillars-card,
+    .steps-grid,
+    .value-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trace-block {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dash-kpi-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dash-charts-row {
+        grid-template-columns: 1fr;
+    }
+
+    .trust-metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .trace-flow-card {
+        padding: 1.5rem;
+    }
+
+    .flow-steps-row,
+    .flow-steps-sub {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 640px) {
+    .navbar {
+        padding: 1rem 1.25rem;
+    }
+
+    .navbar {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 0.75rem 1rem;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+
+    .btn-contact {
+        padding: 0.6rem 1rem;
+    }
+
+    .hero-section {
+        padding: 3rem 1.25rem 2rem;
+    }
+
+    .hero-title {
+        font-size: clamp(2rem, 10vw, 2.35rem);
+        overflow-wrap: anywhere;
+    }
+
+    .hero-subtitle {
+        font-size: 1.05rem;
+    }
+
+    .badge-pill {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .hero-actions {
+        width: 100%;
+    }
+
+    .hero-actions,
+    .sectors-header,
+    .value-header {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .hero-actions a {
+        justify-content: center;
+    }
+
+    .btn-primary,
+    .btn-secondary,
+    .btn-link-quiet {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .btn-primary,
+    .btn-secondary,
+    .btn-contact,
+    .btn-plan-outline,
+    .btn-plan-filled,
+    .modal-close {
+        min-height: 44px;
+    }
+
+    .tech-bar {
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: space-between;
+    }
+
+    .tech-bar span {
+        font-size: 0.8rem;
+    }
+
+    .methodology-section,
+    .dashboard-preview-section,
+    .trace-sectors-section,
+    .trust-section,
+    .pricing-section,
+    .faq-section {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    .methodology-section,
+    .trace-sectors-section,
+    .pricing-section {
+        margin-top: 3.5rem;
+    }
+
+    .pillars-card,
+    .step-card,
+    .value-card,
+    .sector-card,
+    .plan-card,
+    .comparison-table-wrapper,
+    .trace-flow-card {
+        padding: 1.25rem;
+    }
+
+    .section-header h2,
+    .value-header h2,
+    .sectors-header h2,
+    .pricing-section h2 {
+        font-size: 1.85rem;
+    }
+
+    .section-header {
+        margin-bottom: 2rem;
+    }
+
+    .pricing-cards-grid,
+    .sectors-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-table-wrapper {
+        overflow-x: auto;
+    }
+
+    .comparison-table {
+        min-width: 650px;
+    }
+
+    .flow-steps-row,
+    .flow-steps-sub {
+        align-items: flex-start;
+        gap: 0.4rem;
+        line-height: 1.3;
+    }
+
+    .f-step {
+        flex: 1 1 auto;
+        text-align: center;
+    }
+
+    .flow-stats {
+        gap: 0.75rem;
+    }
+
+    .flow-stats strong {
+        font-size: 1.25rem;
+    }
+
+    .flow-stats span {
+        display: block;
+        font-size: 0.7rem;
+    }
+
+    .dash-kpi-row,
+    .trust-metrics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dash-mockup-body {
+        padding: 1.25rem;
+    }
+
+    .modal-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .hero-section {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .methodology-section,
+    .dashboard-preview-section,
+    .trace-sectors-section,
+    .trust-section,
+    .pricing-section,
+    .faq-section {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .nav-links {
+        gap: 0.6rem 0.75rem;
+    }
+
+    .hero-title {
+        font-size: 1.9rem;
+    }
+
+    .tech-bar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .flow-stats {
+        align-items: flex-start;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .modal-overlay {
+        padding: 1rem;
+    }
+
+    .modal-card {
+        padding: 1.25rem;
+        max-height: calc(100vh - 2rem);
+    }
+
+    .trace-metrics-grid {
+        grid-template-columns: 1fr;
+    }
+}
