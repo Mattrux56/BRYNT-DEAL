@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico Comercial | BRYNT DEAL</title>
+    <meta name="description" content="Responde 5 preguntas y descubre qué plan de BRYNT DEAL se ajusta mejor a tu empresa.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/diagnostico.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="diagnostico-page">
+
+    <header class="navbar diag-navbar">
+        <a href="index.html" class="logo-container" style="text-decoration:none;">
+            <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="20,20 55,50 20,80" fill="#c69214"/>
+                <path d="M40 20 L75 20 L50 50 L75 80 L40 80 L65 50 Z" fill="#0c192c"/>
+            </svg>
+            <span class="logo-text">BRYNT<span> DEAL</span></span>
+        </a>
+        <a href="index.html" class="btn-link-quiet">← Volver al sitio</a>
+    </header>
+
+    <main class="diag-main">
+
+        <!-- BARRA DE PROGRESO -->
+        <div class="diag-progress-wrap" id="diag-progress-wrap" hidden>
+            <div class="diag-progress-track">
+                <div class="diag-progress-fill" id="diag-progress-fill"></div>
+            </div>
+            <span class="diag-progress-label" id="diag-progress-label">Pregunta 1 de 5</span>
+        </div>
+
+        <!-- PANTALLA 0: INTRO -->
+        <section class="diag-screen" id="screen-intro">
+            <span class="sub-label">DIAGNÓSTICO COMERCIAL GRATUITO</span>
+            <h1>Encontremos el plan correcto para tu empresa</h1>
+            <p class="diag-intro-sub">5 preguntas, menos de 2 minutos. Al final te decimos qué plan de BRYNT se ajusta a tu sector, tu reto comercial y tu presupuesto — y agendamos tu demo con esa información lista.</p>
+            <button type="button" class="btn-primary" id="btn-start-diag">
+                Empezar diagnóstico
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <p class="diag-skip"><a href="index.html#planes">Prefiero ver los planes directamente →</a></p>
+        </section>
+
+        <div class="diag-scroll-steps">
+
+        <!-- PASO 1: SECTOR -->
+        <section class="diag-screen" id="screen-1">
+            <span class="sub-label">1. TU SECTOR</span>
+            <h2>¿En qué sector opera tu empresa?</h2>
+            <div class="diag-options" data-step="sector">
+                <button type="button" class="diag-option" data-value="Industria & Abastecimiento">
+                    <span class="diag-option-icon">🏭</span>
+                    <span class="diag-option-text">
+                        <strong>Industria & Abastecimiento</strong>
+                        <small>Acero, perfiles, láminas, ferretería y suministros</small>
+                    </span>
+                </button>
+                <button type="button" class="diag-option" data-value="Servicios Técnicos & Mantenimiento">
+                    <span class="diag-option-icon">🔧</span>
+                    <span class="diag-option-text">
+                        <strong>Servicios Técnicos & Mantenimiento</strong>
+                        <small>Climatización, mantenimiento y sistemas técnicos</small>
+                    </span>
+                </button>
+                <button type="button" class="diag-option" data-value="Gestión Empresarial">
+                    <span class="diag-option-icon">📊</span>
+                    <span class="diag-option-text">
+                        <strong>Gestión Empresarial</strong>
+                        <small>Sistemas de gestión y consultoría</small>
+                    </span>
+                </button>
+                <button type="button" class="diag-option" data-value="Salud & Bienestar">
+                    <span class="diag-option-icon">🏥</span>
+                    <span class="diag-option-text">
+                        <strong>Salud & Bienestar</strong>
+                        <small>Servicios profesionales autorizados</small>
+                    </span>
+                </button>
+                <button type="button" class="diag-option" data-value="Otro sector">
+                    <span class="diag-option-icon">✨</span>
+                    <span class="diag-option-text">
+                        <strong>Otro sector</strong>
+                        <small>Cuéntanos tu caso particular al agendar</small>
+                    </span>
+                </button>
+            </div>
+            <button type="button" class="diag-back" data-back>← Atrás</button>
+        </section>
+
+        <!-- PASO 2: RETO COMERCIAL -->
+        <section class="diag-screen" id="screen-2">
+            <span class="sub-label">2. TU PRINCIPAL RETO</span>
+            <h2>¿Qué te está costando más control hoy?</h2>
+            <div class="diag-options" data-step="reto">
+                <button type="button" class="diag-option" data-value="Seguimiento disperso (cotizaciones, WhatsApp, llamadas sin trazabilidad)">
+                    <span class="diag-option-text"><strong>Seguimiento disperso</strong><small>Cotizaciones, WhatsApp y llamadas sin una trazabilidad común</small></span>
+                </button>
+                <button type="button" class="diag-option" data-value="Poca visibilidad gerencial sobre el pipeline">
+                    <span class="diag-option-text"><strong>Poca visibilidad gerencial</strong><small>Se conoce la venta final, pero no el pipeline ni las causas de pérdida</small></span>
+                </button>
+                <button type="button" class="diag-option" data-value="Clientes sin inteligencia (poca recurrencia/reactivación)">
+                    <span class="diag-option-text"><strong>Clientes sin inteligencia</strong><small>Base de clientes usada para facturar, poco explotada para recurrencia</small></span>
+                </button>
+                <button type="button" class="diag-option" data-value="Marketing desconectado de ventas">
+                    <span class="diag-option-text"><strong>Marketing desconectado de ventas</strong><small>Campañas que generan interacción difícil de atribuir a ingresos</small></span>
+                </button>
+                <button type="button" class="diag-option" data-value="Datos sin acción (reportes que no generan decisiones)">
+                    <span class="diag-option-text"><strong>Datos sin acción</strong><small>Reportes que describen el pasado sin convertirse en decisiones</small></span>
+                </button>
+            </div>
+            <button type="button" class="diag-back" data-back>← Atrás</button>
+        </section>
+
+        <!-- PASO 3: PROFUNDIDAD DESEADA -->
+        <section class="diag-screen" id="screen-3">
+            <span class="sub-label">3. TU ENFOQUE</span>
+            <h2>¿Qué buscas principalmente ahora?</h2>
+            <div class="diag-options diag-options-wide" data-step="profundidad">
+                <button type="button" class="diag-option diag-option-big" data-value="control">
+                    <span class="diag-option-icon">🗂️</span>
+                    <span class="diag-option-text">
+                        <strong>Ordenar y controlar mi operación comercial</strong>
+                        <small>Embudo, seguimiento, responsables y disciplina sobre oportunidades</small>
+                    </span>
+                </button>
+                <button type="button" class="diag-option diag-option-big" data-value="inteligencia">
+                    <span class="diag-option-icon">🚀</span>
+                    <span class="diag-option-text">
+                        <strong>Inteligencia comercial y crecimiento activo</strong>
+                        <small>Ventas perdidas, potencial de productos, campañas y revisión gerencial</small>
+                    </span>
+                </button>
+            </div>
+            <button type="button" class="diag-back" data-back>← Atrás</button>
+        </section>
+
+        <!-- PASO 4: HONORARIO MENSUAL DISPONIBLE -->
+        <section class="diag-screen" id="screen-4">
+            <span class="sub-label">4. HONORARIO MENSUAL POR CRECIMIENTO</span>
+            <h2>¿Qué honorario mensual tienes disponible para esta gestión?</h2>
+            <div class="diag-options" data-step="presupuesto">
+                <button type="button" class="diag-option" data-value="1" data-label="Hasta $1.000.000 COP/mes">
+                    <span class="diag-option-text"><strong>Hasta $1.000.000 COP/mes</strong></span>
+                </button>
+                <button type="button" class="diag-option" data-value="2" data-label="Entre $1.000.000 y $2.000.000 COP/mes">
+                    <span class="diag-option-text"><strong>$1.000.000 – $2.000.000 COP/mes</strong></span>
+                </button>
+                <button type="button" class="diag-option" data-value="3" data-label="Entre $2.000.000 y $3.500.000 COP/mes">
+                    <span class="diag-option-text"><strong>$2.000.000 – $3.500.000 COP/mes</strong></span>
+                </button>
+                <button type="button" class="diag-option" data-value="4" data-label="Más de $3.500.000 COP/mes o a convenir">
+                    <span class="diag-option-text"><strong>Más de $3.500.000 COP/mes</strong><small>O prefiero un esquema a convenir (Corporativo)</small></span>
+                </button>
+            </div>
+            <button type="button" class="diag-back" data-back>← Atrás</button>
+        </section>
+
+        <!-- PASO 5: DATOS DE CONTACTO -->
+        <section class="diag-screen" id="screen-5">
+            <span class="sub-label">5. ÚLTIMO PASO</span>
+            <h2>¿A quién le mostramos tu diagnóstico?</h2>
+            <form id="diag-contact-form" class="diag-form">
+                <label>
+                    Nombre
+                    <input type="text" name="nombre" required placeholder="Tu nombre completo">
+                </label>
+                <label>
+                    Empresa
+                    <input type="text" name="empresa" required placeholder="Nombre de tu empresa">
+                </label>
+                <label>
+                    WhatsApp
+                    <input type="tel" name="telefono" required placeholder="Ej. 3001234567">
+                </label>
+                <button type="submit" class="btn-primary diag-submit">Ver mi diagnóstico</button>
+            </form>
+            <button type="button" class="diag-back" data-back>← Atrás</button>
+        </section>
+
+        </div>
+
+        <!-- RESULTADO -->
+        <section class="diag-screen" id="screen-result" hidden>
+            <span class="sub-label" id="result-eyebrow">LEAD REGISTRADO</span>
+            <h2 id="result-title">Gracias, tus datos fueron guardados correctamente</h2>
+            <p class="diag-intro-sub" id="result-rationale">Tu información quedó lista para ser revisada y para continuar con la agendación por WhatsApp.</p>
+
+            <div class="result-card" id="result-card">
+                <div class="result-card-top">
+                    <h3>Resumen del lead</h3>
+                    <div class="result-card-price" id="result-card-price">Guardado</div>
+                </div>
+                <ul class="plan-checklist" id="result-card-features">
+                    <li>✓ Datos capturados correctamente</li>
+                    <li>✓ Listo para agendar demo</li>
+                    <li>✓ País/empresa/WhatsApp registrados</li>
+                </ul>
+            </div>
+
+            <div class="result-summary" id="result-summary"></div>
+
+            <div class="diag-final-actions">
+                <button type="button" class="btn-primary" id="btn-agendar-whatsapp">
+                    Agendar demo por WhatsApp
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+                <a href="index.html#planes" class="btn-secondary">Ver todos los planes</a>
+            </div>
+        </section>
+
+    </main>
+
+    <brynt-footer></brynt-footer>
+
+    <script src="js/brynt-config.js"></script>
+    <script src="js/brynt_footer.js"></script>
+    <script src="js/diagnostico.js"></script>
+</body>
+</html>

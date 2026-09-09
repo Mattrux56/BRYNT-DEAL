@@ -4,9 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const successView = document.getElementById('modal-success-view');
     const form = document.getElementById('modal-form');
     const planSelect = document.getElementById('modal-plan-select');
-
-    // Número de WhatsApp de BRYNT DEAL. Reemplazar por el número real antes de publicar.
-    const WHATSAPP_NUMBER = '573000000000';
+    const WHATSAPP_NUMBER = window.BRYNT_CONFIG?.whatsappNumber || '573000000000';
 
     if (!overlay || !form) {
         return;
@@ -19,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (planName && planSelect) {
             planSelect.value = planName;
         }
+
         overlay.hidden = false;
         document.body.style.overflow = 'hidden';
         formView.hidden = false;
@@ -36,8 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    document.querySelectorAll('[data-close-modal]').forEach(closeBtn => {
-        closeBtn.addEventListener('click', closeModal);
+    document.querySelectorAll('[data-close-modal]').forEach(button => {
+        button.addEventListener('click', closeModal);
     });
 
     overlay.addEventListener('click', event => {
@@ -61,10 +60,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const telefono = data.get('telefono')?.toString().trim() || '';
         const plan = data.get('plan')?.toString().trim() || 'No sé todavía';
 
-        const mensaje = `Hola BRYNT DEAL, soy ${nombre} de ${empresa}. ` +
+        const message = `Hola BRYNT DEAL, soy ${nombre} de ${empresa}. ` +
             `Quiero agendar una demo (plan de interés: ${plan}). Mi WhatsApp de contacto: ${telefono}.`;
 
-        const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensaje)}`;
+        const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 
         window.open(whatsappUrl, '_blank', 'noopener');
 

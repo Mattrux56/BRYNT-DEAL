@@ -113,6 +113,29 @@ class BryntFooter extends HTMLElement {
                 .social-icons svg:hover {
                     fill: #c69214;
                 }
+
+                @media (max-width: 640px) {
+                    .footer-container {
+                        padding: 2.5rem 1.25rem 1.5rem 1.25rem;
+                    }
+
+                    .footer-grid {
+                        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+                        gap: 1.75rem;
+                        margin-bottom: 2rem;
+                    }
+
+                    .footer-bottom {
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 1rem;
+                        text-align: left;
+                    }
+
+                    .legal-links {
+                        gap: 0.85rem 1rem;
+                    }
+                }
             </style>
 
             <footer class="footer-container">
