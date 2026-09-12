@@ -48,6 +48,7 @@
 /* PANTALLAS */
 .diag-screen {
     animation: diag-fade-in 0.3s ease;
+    scroll-margin-top: 96px;
 }
 
 @keyframes diag-fade-in {
@@ -128,6 +129,7 @@
 .diag-option.selected {
     border-color: var(--brynt-gold);
     background: #fdfaf1;
+    box-shadow: 0 6px 16px rgba(198, 146, 20, 0.15);
 }
 
 .diag-option-icon {
@@ -222,10 +224,10 @@
 .result-card {
     background: #ffffff;
     border: 2px solid var(--brynt-gold);
-    border-radius: 18px;
+    border-radius: var(--radius-lg);
     padding: 1.75rem;
     max-width: 420px;
-    box-shadow: 0 12px 30px rgba(198, 146, 20, 0.15);
+    box-shadow: var(--shadow-gold);
     margin-bottom: 1.75rem;
 }
 
@@ -254,6 +256,24 @@
     font-size: 0.8rem;
     font-weight: 600;
     color: var(--brynt-gray-text);
+}
+
+.result-upsell {
+    background: #fdfaf1;
+    border: 1.5px dashed var(--brynt-gold);
+    border-radius: 14px;
+    padding: 1rem 1.25rem;
+    max-width: 500px;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+    line-height: 1.55;
+    color: var(--brynt-navy);
+}
+
+.result-upsell strong {
+    color: var(--brynt-gold-hover);
+    display: block;
+    margin-bottom: 0.2rem;
 }
 
 .result-summary {

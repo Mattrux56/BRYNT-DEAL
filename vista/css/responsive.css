@@ -33,10 +33,6 @@
         grid-template-columns: 1fr;
     }
 
-    .trust-metrics-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .trace-flow-card {
         padding: 1.5rem;
     }
@@ -134,7 +130,6 @@
     .methodology-section,
     .dashboard-preview-section,
     .trace-sectors-section,
-    .trust-section,
     .pricing-section,
     .faq-section {
         padding-left: 1.25rem;
@@ -206,8 +201,7 @@
         font-size: 0.7rem;
     }
 
-    .dash-kpi-row,
-    .trust-metrics-grid {
+    .dash-kpi-row {
         grid-template-columns: 1fr;
     }
 
@@ -229,7 +223,6 @@
     .methodology-section,
     .dashboard-preview-section,
     .trace-sectors-section,
-    .trust-section,
     .pricing-section,
     .faq-section {
         padding-left: 1rem;
@@ -262,9 +255,5 @@
     .modal-card {
         padding: 1.25rem;
         max-height: calc(100vh - 2rem);
-    }
-
-    .trace-metrics-grid {
-        grid-template-columns: 1fr;
     }
 }

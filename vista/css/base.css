@@ -3,10 +3,20 @@
     --brynt-dark-bg: #091220;
     --brynt-gold: #c69214;
     --brynt-gold-hover: #ab7d0f;
+    --brynt-gold-soft: #faf5e6;
     --brynt-gray-text: #64748b;
     --brynt-bg: #fcfdfd;
     --brynt-card-bg: #ffffff;
     --brynt-border: #e2e8f0;
+
+    /* Escala de radios y sombras, para consistencia visual en todo el sitio */
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 22px;
+    --shadow-sm: 0 2px 10px rgba(12, 25, 44, 0.05);
+    --shadow-md: 0 14px 32px rgba(12, 25, 44, 0.09);
+    --shadow-gold: 0 14px 32px rgba(198, 146, 20, 0.18);
+    --gold-gradient: linear-gradient(135deg, #d8a51f, var(--brynt-gold) 55%, var(--brynt-gold-hover));
 }
 
 * {
@@ -22,6 +32,9 @@ html {
 body {
     font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
     background-color: var(--brynt-bg);
+    background-image: radial-gradient(circle at 12% 0%, rgba(198, 146, 20, 0.06), transparent 40%),
+                       radial-gradient(circle at 88% 8%, rgba(12, 25, 44, 0.04), transparent 35%);
+    background-attachment: fixed;
     color: var(--brynt-navy);
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
@@ -30,4 +43,9 @@ body {
 
 img, svg {
     max-width: 100%;
+}
+
+::selection {
+    background: var(--brynt-gold);
+    color: #ffffff;
 }

@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const revealElements = document.querySelectorAll(
-        '.methodology-section, .value-section, .trace-sectors-section, .pricing-section, .pillars-card, .step-card, .value-card, .sector-card, .plan-card, .comparison-table-wrapper, .dashboard-preview-section, .trust-section, .faq-section, .faq-item'
+        '.methodology-section, .value-section, .trace-sectors-section, .pricing-section, .pillars-card, .step-card, .value-card, .sector-card, .plan-card, .comparison-table-wrapper, .dashboard-preview-section, .testimonial-card, .faq-section, .faq-item'
     );
 
     revealElements.forEach((element, index) => {
