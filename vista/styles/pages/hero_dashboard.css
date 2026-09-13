@@ -1,0 +1,442 @@
+/* ==========================================================================
+   NAVBAR CON DESPLEGABLES
+   ========================================================================== */
+
+.navbar.hb-navbar {
+    padding: 1.1rem 3rem;
+    gap: 1.5rem;
+}
+
+.hb-logo-block {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.hb-logo-block .logo-container {
+    gap: 0.55rem;
+}
+
+.hb-logo-tagline {
+    margin-top: 0.35rem;
+    margin-left: 2.6rem;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    color: var(--brynt-gray-text);
+    text-transform: uppercase;
+}
+
+.hb-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.hb-nav-item {
+    position: relative;
+}
+
+.hb-nav-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    color: var(--brynt-navy);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.7rem 0.85rem;
+    border-radius: 8px;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.hb-nav-trigger:hover,
+.hb-nav-trigger:focus-visible {
+    color: var(--brynt-gold-hover);
+    background-color: rgba(198, 146, 20, 0.07);
+}
+
+.hb-nav-caret {
+    width: 10px;
+    height: 10px;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.hb-nav-item.is-open .hb-nav-caret {
+    transform: rotate(180deg);
+}
+
+.hb-nav-panel {
+    position: absolute;
+    top: calc(100% + 0.6rem);
+    left: 0;
+    min-width: 240px;
+    background: var(--brynt-card-bg);
+    border: 1px solid var(--brynt-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    padding: 0.6rem;
+    display: none;
+    flex-direction: column;
+    gap: 0.1rem;
+    z-index: 200;
+}
+
+.hb-nav-item.is-open .hb-nav-panel {
+    display: flex;
+    animation: hb-panel-in 0.16s ease-out;
+}
+
+@keyframes hb-panel-in {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hb-nav-panel a {
+    display: block;
+    padding: 0.65rem 0.8rem;
+    border-radius: 8px;
+    color: var(--brynt-navy);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.92rem;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.hb-nav-panel a:hover {
+    background-color: var(--brynt-gold-soft);
+    color: var(--brynt-gold-hover);
+}
+
+.hb-nav-cta {
+    margin-left: 0.5rem;
+    text-decoration: none;
+}
+
+.hb-logo-block {
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   HERO — IMAGEN COMPLETA CON TÍTULO SUPERPUESTO
+   ========================================================================== */
+
+.hb-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 560px;
+    overflow: hidden;
+}
+
+.hb-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hb-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 65%;
+    display: block;
+}
+
+.hb-hero-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+        rgba(252, 253, 253, 0.94) 0%,
+        rgba(252, 253, 253, 0.82) 20%,
+        rgba(252, 253, 253, 0.42) 38%,
+        rgba(252, 253, 253, 0.08) 52%,
+        rgba(12, 25, 44, 0.02) 65%,
+        rgba(12, 25, 44, 0.08) 100%);
+}
+
+.hb-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 660px;
+    padding: 3.5rem 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.hb-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--brynt-gold-hover);
+    margin-bottom: 1.4rem;
+}
+
+.hb-eyebrow::before {
+    content: "";
+    width: 22px;
+    height: 2px;
+    background: var(--brynt-gold);
+}
+
+.hb-hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--brynt-navy);
+    max-width: 14ch;
+    margin-bottom: 1.5rem;
+}
+
+.hb-hero-title .text-gold {
+    color: var(--brynt-gold);
+}
+
+.hb-hero-subtitle {
+    font-size: 1.08rem;
+    color: var(--brynt-navy);
+    line-height: 1.65;
+    max-width: 46ch;
+    margin-bottom: 2.25rem;
+}
+
+.hb-hero-features {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    font-size: 0.86rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--brynt-navy);
+}
+
+.hb-hero-features .hb-feature {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.hb-hero-features .hb-feature-icon {
+    font-size: 1.05rem;
+}
+
+.hb-hero-features .hb-divider {
+    color: var(--brynt-border);
+    font-weight: 400;
+}
+
+.hb-hero-overlay {
+    position: absolute;
+    top: 2.75rem;
+    left: 56%;
+    max-width: 230px;
+    color: #ffffff;
+    z-index: 1;
+    padding: 1rem 1.1rem;
+    border-radius: 16px;
+    background: radial-gradient(120% 140% at 20% 15%, rgba(9, 18, 32, 0.38), rgba(9, 18, 32, 0.05) 72%);
+}
+
+.hb-hero-overlay-rule {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: var(--brynt-gold);
+    margin-bottom: 0.9rem;
+}
+
+.hb-hero-overlay p {
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    line-height: 1.55;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
+.hb-hero-overlay strong {
+    color: #e9c86b;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   BANDA DE KPIS
+   ========================================================================== */
+
+.hb-kpi-band {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.25rem;
+    padding: 2.5rem 3rem 1rem 3rem;
+}
+
+.hb-kpi-card {
+    background: var(--brynt-card-bg);
+    border: 1px solid var(--brynt-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    padding: 1.6rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.hb-kpi-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.hb-kpi-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1.4rem;
+}
+
+.hb-kpi-icon {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--brynt-gold-soft);
+    border-radius: var(--radius-sm);
+    font-size: 1.2rem;
+}
+
+.hb-kpi-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--brynt-navy);
+    line-height: 1.3;
+    padding-top: 0.35rem;
+}
+
+.hb-kpi-value {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--brynt-navy);
+    letter-spacing: -0.02em;
+    margin-bottom: 0.85rem;
+}
+
+.hb-kpi-delta-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 1.1rem;
+}
+
+.hb-kpi-delta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.hb-kpi-delta-top {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-weight: 700;
+    font-size: 0.92rem;
+    color: #1a9c5c;
+}
+
+.hb-kpi-delta-note {
+    font-size: 0.78rem;
+    color: var(--brynt-gray-text);
+}
+
+.hb-kpi-spark {
+    width: 78px;
+    height: 34px;
+    flex-shrink: 0;
+}
+
+.hb-kpi-footer {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.78rem;
+    color: var(--brynt-gray-text);
+    padding-top: 1rem;
+    border-top: 1px solid var(--brynt-border);
+}
+
+/* ==========================================================================
+   BANDA DE CONFIANZA / LOGOS
+   ========================================================================== */
+
+.hb-trust-bar {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 2.25rem 3rem 3rem 3rem;
+    flex-wrap: wrap;
+}
+
+.hb-trust-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--brynt-gray-text);
+    line-height: 1.5;
+    flex-shrink: 0;
+}
+
+.hb-trust-logos {
+    display: flex;
+    align-items: center;
+    gap: 2.25rem;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.hb-trust-chip {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #93a0b3;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+    opacity: 0.85;
+    transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.hb-trust-chip:hover {
+    opacity: 1;
+    color: var(--brynt-navy);
+}
+
+.hb-trust-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--brynt-navy);
+    text-decoration: none;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.hb-trust-more:hover {
+    color: var(--brynt-gold-hover);
+}

@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+function initSmoothScrollLinks() {
     const links = document.querySelectorAll('a[href^="#"]');
 
     links.forEach(link => {
@@ -22,4 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
-});
+}
+
+document.addEventListener('DOMContentLoaded', initSmoothScrollLinks);
+document.addEventListener('components:loaded', initSmoothScrollLinks);

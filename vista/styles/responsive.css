@@ -1,3 +1,24 @@
+@media (max-width: 1080px) {
+    .hb-hero-content {
+        max-width: 70%;
+        padding: 2.75rem 2rem 2.25rem 2rem;
+    }
+
+    .hb-hero-overlay {
+        left: 62%;
+        max-width: 34%;
+    }
+
+    .hb-kpi-band {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 2rem 2rem 0.5rem 2rem;
+    }
+
+    .hb-trust-bar {
+        padding: 2rem 2rem 2.5rem 2rem;
+    }
+}
+
 @media (max-width: 900px) {
     .navbar {
         padding: 1.25rem 1.5rem;
@@ -5,6 +26,46 @@
 
     .nav-links {
         gap: 1rem;
+    }
+
+    .hb-navbar {
+        flex-wrap: wrap;
+    }
+
+    .hb-nav-links {
+        flex-wrap: wrap;
+        gap: 0.15rem;
+        order: 3;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .hb-nav-cta {
+        margin-left: 0;
+    }
+
+    .hb-hero-title {
+        font-size: 2.4rem;
+    }
+
+    .hb-hero {
+        min-height: 460px;
+    }
+
+    .hb-hero-content {
+        max-width: 100%;
+    }
+
+    .hb-hero-bg::after {
+        background: rgba(252, 253, 253, 0.88);
+    }
+
+    .hb-hero-overlay {
+        display: none;
+    }
+
+    .hb-kpi-band {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .hero-title {
@@ -66,6 +127,49 @@
 
     .btn-contact {
         padding: 0.6rem 1rem;
+    }
+
+    .hb-navbar {
+        padding: 1rem 1.25rem;
+    }
+
+    .hb-logo-tagline {
+        margin-left: 2.4rem;
+        font-size: 0.55rem;
+    }
+
+    .hb-nav-panel {
+        position: static;
+        box-shadow: none;
+        border: none;
+        padding: 0 0 0 0.75rem;
+        margin-top: 0.2rem;
+    }
+
+    .hb-hero-content {
+        padding: 2.25rem 1.25rem 2rem 1.25rem;
+    }
+
+    .hb-hero {
+        min-height: 420px;
+    }
+
+    .hb-hero-title {
+        font-size: 2rem;
+    }
+
+    .hb-kpi-band {
+        grid-template-columns: 1fr;
+        padding: 1.75rem 1.25rem 0.5rem 1.25rem;
+    }
+
+    .hb-trust-bar {
+        padding: 1.75rem 1.25rem 2.25rem 1.25rem;
+        gap: 1.25rem;
+    }
+
+    .hb-trust-logos {
+        gap: 1.5rem;
     }
 
     .hero-section {

@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+function initContactModal() {
     const overlay = document.getElementById('modal-overlay');
     const formView = document.getElementById('modal-form-view');
     const successView = document.getElementById('modal-success-view');
@@ -6,10 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const planSelect = document.getElementById('modal-plan-select');
     const WHATSAPP_NUMBER = window.BRYNT_CONFIG?.whatsappNumber || '573000000000';
 
-    if (!overlay || !form) {
+    if (!overlay || !form || overlay.dataset.initialized === 'true') {
         return;
     }
 
+    overlay.dataset.initialized = 'true';
     overlay.hidden = true;
     document.body.style.overflow = '';
 
@@ -71,4 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
         successView.hidden = false;
         form.reset();
     });
-});
+}
+
+document.addEventListener('DOMContentLoaded', initContactModal);
+document.addEventListener('components:loaded', initContactModal);
