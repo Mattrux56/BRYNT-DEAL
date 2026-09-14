@@ -1,0 +1,6 @@
+para ejecutar el codigo:
+npm run dev
+
+requeriment: 
+npm install
+

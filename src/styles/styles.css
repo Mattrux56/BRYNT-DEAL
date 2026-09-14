@@ -6,7 +6,7 @@
     padding: 1.25rem 4rem;
     position: sticky;
     top: 0;
-    background: rgba(252, 253, 253, 0.85);
+    background: rgb(247 247 247 / 85%);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid transparent;
     box-shadow: 0 1px 0 rgba(12, 25, 44, 0.05);
@@ -20,8 +20,11 @@
 }
 
 .logo-icon {
-    width: 32px;
-    height: 32px;
+    width: 140px;
+    height: auto;
+    max-height: 42px;
+    object-fit: contain;
+    display: block;
 }
 
 .logo-text {
@@ -48,6 +51,21 @@
     font-weight: 600;
     font-size: 0.95rem;
     transition: color 0.2s ease;
+}
+
+.hb-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    flex: 1;
+}
+
+.hb-nav-link,
+.hb-nav-item {
+    display: flex;
+    align-items: center;
 }
 
 .nav-links a:hover {
@@ -231,6 +249,99 @@
 .btn-plan-outline {
     background: transparent;
     width: 100%;
+}
+
+.site-footer {
+    background: #0c192c;
+    color: #e2e8f0;
+    padding: 3rem 4rem 1.5rem;
+    margin-top: 4rem;
+}
+
+.footer-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(150px, 1fr));
+    gap: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+.footer-column h4 {
+    margin: 0 0 1rem;
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.footer-column li {
+    color: #d9e4f2;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.footer-bottom {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    color: #bfd0ea;
+    font-size: 0.9rem;
+}
+
+.footer-bottom-left,
+.footer-bottom-right,
+.footer-socials {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-bottom-left {
+    flex: 1;
+    gap: 1.5rem;
+}
+
+.footer-bottom-right {
+    justify-content: center;
+}
+
+.footer-bottom-right a {
+    color: #d9e4f2;
+    text-decoration: none;
+}
+
+.footer-bottom-right a:hover {
+    color: #ffffff;
+}
+
+.footer-socials {
+    justify-content: flex-end;
+}
+
+.footer-socials button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: transparent;
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
 }
 
 .tech-bar {

@@ -87,8 +87,29 @@
     z-index: 200;
 }
 
+.hb-nav-panel--cards {
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 760px;
+    width: max-content;
+    max-width: calc(100vw - 3rem);
+    background: rgba(245, 248, 252, 0.96);
+    border: 1px solid rgba(12, 25, 44, 0.08);
+    border-radius: 1.25rem;
+    box-shadow: 0 24px 60px rgba(12, 25, 44, 0.18);
+    padding: 1rem;
+    display: none;
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+    gap: 1rem;
+}
+
 .hb-nav-item.is-open .hb-nav-panel {
     display: flex;
+    animation: hb-panel-in 0.16s ease-out;
+}
+
+.hb-nav-item.is-open .hb-nav-panel--cards {
+    display: grid;
     animation: hb-panel-in 0.16s ease-out;
 }
 
@@ -111,6 +132,83 @@
 .hb-nav-panel a:hover {
     background-color: var(--brynt-gold-soft);
     color: var(--brynt-gold-hover);
+}
+
+.hb-nav-card {
+    appearance: none;
+    border: 1px solid rgba(12, 25, 44, 0.08);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(246, 249, 252, 0.96));
+    border-radius: 1.2rem;
+    overflow: hidden;
+    box-shadow: 0 14px 28px rgba(12, 25, 44, 0.08);
+    text-align: left;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.hb-nav-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 36px rgba(12, 25, 44, 0.12);
+}
+
+.hb-nav-card-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 170px;
+    min-height: 170px;
+    background: linear-gradient(135deg, rgba(12, 25, 44, 0.04), rgba(198, 146, 20, 0.09));
+}
+
+.hb-nav-card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hb-nav-card-content {
+    padding: 1.1rem 1.1rem 1.2rem;
+}
+
+.hb-nav-card-eyebrow {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--brynt-gold-hover);
+    font-weight: 800;
+    margin-bottom: 0.7rem;
+}
+
+.hb-nav-card h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.2;
+    color: var(--brynt-navy);
+    font-weight: 800;
+}
+
+.hb-nav-card p {
+    margin: 0.65rem 0 1rem;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: var(--brynt-gray-text);
+}
+
+.hb-nav-card-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--brynt-navy);
+}
+
+.hb-nav-card-cta svg {
+    width: 14px;
+    height: 14px;
 }
 
 .hb-nav-cta {
