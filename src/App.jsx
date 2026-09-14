@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import fondoInicioImg from './assets/images/fondo_inicio.jpg'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import ContactModal from './components/ContactModal'
@@ -77,7 +78,7 @@ export default function App() {
       <main>
         <section id="inicio" className="hb-hero">
           <div className="hb-hero-bg">
-            <img src="/src/assets/images/fondo_inicio.jpg" alt="Oficina BRYNT DEAL con vista panorámica de la ciudad" />
+            <img src={fondoInicioImg} alt="Oficina BRYNT DEAL con vista panorámica de la ciudad" />
           </div>
 
           <div className="hb-hero-content">
