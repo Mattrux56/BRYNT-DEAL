@@ -1,56 +1,19 @@
-import { useEffect, useMemo, useState } from 'react'
-import { bryntConfig } from '../data/config'
+import PropTypes from 'prop-types'
+import { bryntConfig } from '../../../data/config'
+import { contactModalDefaults } from '../constants/contactModalData'
+import { useContactModal } from '../hooks/useContactModal'
 
+/**
+ * Modal de contacto que abre una conversación de WhatsApp.
+ *
+ * @param {{ isOpen: boolean, onClose: () => void, initialPlan?: string }} props
+ */
 export default function ContactModal({ isOpen, onClose, initialPlan = '' }) {
-  const [plan, setPlan] = useState(initialPlan)
-  const [isSuccess, setIsSuccess] = useState(false)
-
-  const whatsappNumber = useMemo(() => bryntConfig.whatsappNumber, [])
-
-  useEffect(() => {
-    setPlan(initialPlan)
-  }, [initialPlan])
-
-  useEffect(() => {
-    if (!isOpen) return
-
-    const handleKeyDown = (event) => {
-      if (event.key === 'Escape') {
-        onClose()
-      }
-    }
-
-    document.body.style.overflow = 'hidden'
-    window.addEventListener('keydown', handleKeyDown)
-
-    return () => {
-      document.body.style.overflow = ''
-      window.removeEventListener('keydown', handleKeyDown)
-    }
-  }, [isOpen, onClose])
-
-  const handleSubmit = (event) => {
-    event.preventDefault()
-
-    const formData = new FormData(event.currentTarget)
-    const nombre = String(formData.get('nombre') || '').trim()
-    const empresa = String(formData.get('empresa') || '').trim()
-    const telefono = String(formData.get('telefono') || '').trim()
-    const selectedPlan = String(formData.get('plan') || 'No sé todavía').trim()
-
-    const message = `Hola BRYNT DEAL, soy ${nombre} de ${empresa}. Quiero agendar una demo (plan de interés: ${selectedPlan}). Mi WhatsApp de contacto: ${telefono}.`
-
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`
-    window.open(whatsappUrl, '_blank', 'noopener')
-
-    setIsSuccess(true)
-    event.currentTarget.reset()
-  }
-
-  const closeModal = () => {
-    setIsSuccess(false)
-    onClose()
-  }
+  const { plan, setPlan, isSuccess, handleSubmit, closeModal } = useContactModal({
+    isOpen,
+    onClose,
+    initialPlan,
+  })
 
   return (
     <div
@@ -86,8 +49,13 @@ export default function ContactModal({ isOpen, onClose, initialPlan = '' }) {
               </label>
               <label>
                 Plan de interés
-                <select name="plan" id="modal-plan-select" value={plan} onChange={(event) => setPlan(event.target.value)}>
-                  <option value="No sé todavía">No sé todavía</option>
+                <select
+                  name="plan"
+                  id="modal-plan-select"
+                  value={plan}
+                  onChange={(event) => setPlan(event.target.value)}
+                >
+                  <option value={contactModalDefaults.defaultPlan}>No sé todavía</option>
                   {bryntConfig.planOptions.map((option) => (
                     <option key={option.value} value={option.value}>{option.label}</option>
                   ))}
@@ -101,7 +69,7 @@ export default function ContactModal({ isOpen, onClose, initialPlan = '' }) {
         ) : (
           <div className="modal-body" id="modal-success-view">
             <span className="sub-label">LISTO</span>
-            <h3>Te esperamos en WhatsApp</h3>
+            <h3>{contactModalDefaults.successTitle}</h3>
             <p className="modal-sub">
               Abrimos WhatsApp con tu mensaje ya redactado. Si no se abrió automáticamente, escríbenos directamente.
             </p>
@@ -113,4 +81,10 @@ export default function ContactModal({ isOpen, onClose, initialPlan = '' }) {
       </div>
     </div>
   )
+}
+
+ContactModal.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+  initialPlan: PropTypes.string,
 }

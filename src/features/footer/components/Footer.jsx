@@ -1,26 +1,11 @@
-const footerColumns = [
-  {
-    title: 'Tecnología BRYNT',
-    items: ['TRACE Engine', 'Integración Webhook', 'Gestión de Lead ID', 'Panel Analítico'],
-  },
-  {
-    title: 'Objetivos',
-    items: ['Prospección B2B', 'Captación Sectorial', 'Optimización de Recaudo', 'Auditoría de Embudo'],
-  },
-  {
-    title: 'Sectores',
-    items: ['Industria & Abastecimiento', 'Servicios Técnicos', 'Gestión Empresarial', 'Salud & Bienestar'],
-  },
-  {
-    title: 'Empresa',
-    items: ['Sobre BRYNT DEAL', 'Metodología CaaS', 'Casos de Éxito', 'Contacto Directo'],
-  },
-  {
-    title: 'Soporte & Legal',
-    items: ['Políticas Habeas Data', 'Términos del Servicio', 'Centro de Ayuda'],
-  },
-]
+import PropTypes from 'prop-types'
+import { footerColumns } from '../constants/footerData'
 
+/**
+ * Pie de página principal de la aplicación.
+ *
+ * @param {{ onOpenModal: () => void }} props
+ */
 export default function Footer({ onOpenModal }) {
   return (
     <footer className="site-footer">
@@ -58,4 +43,8 @@ export default function Footer({ onOpenModal }) {
       </div>
     </footer>
   )
+}
+
+Footer.propTypes = {
+  onOpenModal: PropTypes.func,
 }
