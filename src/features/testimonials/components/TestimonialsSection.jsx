@@ -5,6 +5,7 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import { testimonials } from '../constants/testimonialsData'
 import TestimonialCard from './TestimonialCard'
+import '../styles/testimonials.css'
 
 export default function TestimonialsSection() {
   return (

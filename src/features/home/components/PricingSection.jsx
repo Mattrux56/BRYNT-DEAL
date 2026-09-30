@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
-import { bryntConfig } from '../../../data/config'
-import { pricingComparisonRows } from '../constants/homeContent'
+import { bryntConfig, pricingComparisonRows } from '../constants/homeContent'
 
 /**
  * Sección de planes y comparativa de precios.

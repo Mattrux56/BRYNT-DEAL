@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { bryntConfig } from '../../../data/config'
+import { bryntConfig } from '../../home/constants/homeContent'
 
 export function useContactModal({ isOpen, onClose, initialPlan = '' }) {
   const [plan, setPlan] = useState(initialPlan)

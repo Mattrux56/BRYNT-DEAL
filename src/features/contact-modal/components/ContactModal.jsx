@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types'
-import { bryntConfig } from '../../../data/config'
+import { bryntConfig } from '../../home/constants/homeContent'
 import { contactModalDefaults } from '../constants/contactModalData'
 import { useContactModal } from '../hooks/useContactModal'
+import '../styles/modal.css'
 
 /**
  * Modal de contacto que abre una conversación de WhatsApp.

@@ -9,7 +9,7 @@ export default function HeaderNavCard({ card, onCloseAll }) {
   return (
     <button type="button" className="hb-nav-card" onClick={onCloseAll}>
       <div className="hb-nav-card-media">
-        <img src={card.image} alt={card.title} loading="eager" fetchPriority="high" />
+        <img src={card.image} alt={card.title} loading="eager" />
       </div>
 
       <div className="hb-nav-card-content">

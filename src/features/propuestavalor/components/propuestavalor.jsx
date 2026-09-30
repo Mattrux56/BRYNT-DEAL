@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
-import { valueCards } from '../constants/homeContent'
+import { valueCards } from '../../propuestavalor/constants/propuesta'
+import '../styles/value.css'
 
 /**
  * Sección de valor propuesta con tarjetas descriptivas.

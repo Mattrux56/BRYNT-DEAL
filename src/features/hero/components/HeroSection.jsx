@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
-import { heroContent } from '../constants/homeContent'
+import { heroContent } from '../constants/heroData'
+import '../styles/hero.css'
 
 /**
  * Sección hero principal de la landing page.
@@ -7,6 +8,9 @@ import { heroContent } from '../constants/homeContent'
  * @param {{ onOpenModal?: () => void }} props
  */
 export default function HeroSection({ onOpenModal }) {
+  const highlights = heroContent?.highlights ?? []
+  const overlayLines = heroContent?.overlayText ?? []
+
   return (
     <section id="inicio" className="hb-hero">
       <div className="hb-hero-bg">
@@ -23,7 +27,7 @@ export default function HeroSection({ onOpenModal }) {
         <p className="hb-hero-subtitle">{heroContent.subtitle}</p>
 
         <div className="hb-hero-features">
-          {heroContent.highlights.map((item) => (
+          {highlights.map((item) => (
             <span key={item.label} className="hb-feature">
               <span className="hb-feature-icon">{item.icon}</span>
               {item.label}
@@ -35,7 +39,7 @@ export default function HeroSection({ onOpenModal }) {
       <div className="hb-hero-overlay">
         <span className="hb-hero-overlay-rule"></span>
         <p>
-          {heroContent.overlayText.map((line, index) => (
+          {overlayLines.map((line, index) => (
             <span key={line + index}>
               {index > 0 && <br />}
               {line}

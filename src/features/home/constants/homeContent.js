@@ -1,61 +1,3 @@
-import fondoInicioImg from '../../../assets/images/fondo_inicio.jpg'
-
-export const heroContent = {
-  backgroundImage: fondoInicioImg,
-  eyebrow: 'Datos que impulsan negocios',
-  title: {
-    first: 'Indicadores que demuestran',
-    accent: 'crecimiento real',
-    full: 'Indicadores que demuestran crecimiento real',
-  },
-  subtitle:
-    'Trazabilidad, conversión y recaudo en un solo lugar. Datos reales para decisiones más grandes.',
-  highlights: [
-    { icon: '📊', label: 'Más visibilidad' },
-    { icon: '🎯', label: 'Más conversión' },
-    { icon: '👥', label: 'Más crecimiento' },
-  ],
-  overlayText: ['Empresas', 'que avanzan', 'con datos,', 'llegan más lejos.'],
-}
-
-export const kpis = [
-  {
-    icon: '👥',
-    label: 'Clientes activos',
-    value: '24',
-    delta: '+14%',
-    note: 'vs. mes anterior',
-  },
-  {
-    icon: '🛒',
-    label: 'Ventas cerradas por la web',
-    value: '$1.280M',
-    delta: '+32%',
-    note: 'vs. mes anterior',
-  },
-  {
-    icon: '🎯',
-    label: 'Oportunidades trazadas',
-    value: '482',
-    delta: '+18%',
-    note: 'vs. mes anterior',
-  },
-  {
-    icon: '📈',
-    label: 'Conversión comercial',
-    value: '27%',
-    delta: '+6 p.p.',
-    note: 'vs. mes anterior',
-  },
-  {
-    icon: '🪙',
-    label: 'Recaudo conciliado',
-    value: '94%',
-    delta: '+4 p.p.',
-    note: 'vs. mes anterior',
-  },
-]
-
 export const methodologyPillars = [
   {
     icon: '🛡️',
@@ -119,51 +61,6 @@ export const methodologySteps = [
   },
 ]
 
-export const valueCards = [
-  {
-    icon: '🍱',
-    badge: 'Fundacional',
-    badgeClass: 'blue',
-    title: 'Orden comercial',
-    text: 'Embudo, seguimiento, responsables, próximas acciones y disciplina sobre oportunidades.',
-  },
-  {
-    icon: '📊',
-    badge: 'KPI',
-    badgeClass: 'gray',
-    title: 'Medición',
-    text: 'Ventas proyectadas vs. reales, conversión, ticket, ciclo y desempeño por producto/servicio.',
-  },
-  {
-    icon: '🛡️',
-    badge: 'Trazabilidad',
-    badgeClass: 'dark',
-    title: 'Trazabilidad',
-    text: 'Origen del lead, campaña, cotización, venta, recaudo y resultado con trazabilidad completa.',
-  },
-  {
-    icon: '☀️',
-    badge: 'Analytics',
-    badgeClass: 'purple',
-    title: 'Inteligencia',
-    text: 'Ventas perdidas, potencial de productos, recurrencia, inactividad, tendencias y oportunidades ocultas.',
-  },
-  {
-    icon: '👥',
-    badge: 'Gerencial',
-    badgeClass: 'green',
-    title: 'Dirección',
-    text: 'Reuniones de resultados, revisión gerencial, planes de acción y recomendaciones estratégicas.',
-  },
-  {
-    icon: '📈',
-    badge: 'Expansión',
-    badgeClass: 'red',
-    title: 'Crecimiento',
-    text: 'Campañas, reactivación, captación y priorización basadas en información real y trazable.',
-  },
-]
-
 export const faqItems = [
   {
     q: '¿Cuánto tiempo toma implementar BRYNT TRACE?',
@@ -190,6 +87,42 @@ export const faqItems = [
     a: 'Sí. Puedes subir de PYMES a PREMIUM sin perder el historial de trazabilidad ya construido en BRYNT TRACE.',
   },
 ]
+
+export const bryntConfig = {
+  whatsappNumber: '573000000000',
+  apiEndpoint: '',
+  plans: {
+    PYMES: {
+      label: 'PYMES',
+      price: '$850.000',
+      shortLabel: 'PYMES',
+      features: [
+        'Seguimiento comercial',
+        'Power BI / KPI',
+        'Reunión mensual de resultados',
+        'Gestión de clientes nuevos, activos y recurrentes',
+        'BRYNT TRACE (trazabilidad)',
+      ],
+    },
+    PREMIUM: {
+      label: 'PREMIUM',
+      price: '$3.200.000',
+      shortLabel: 'Premium',
+      features: [
+        'Todo lo de PYMES',
+        'Inteligencia comercial avanzada',
+        'Segmentación ampliada, inactividad y reactivación',
+        'Revisión gerencial de crecimiento',
+        'Diseño y seguimiento de campañas',
+      ],
+    },
+  },
+  planOrder: ['PYMES', 'PREMIUM'],
+  planOptions: [
+    { value: 'PYMES', label: 'PYMES' },
+    { value: 'PREMIUM', label: 'Premium' },
+  ],
+}
 
 export const pricingComparisonRows = [
   ['Seguimiento comercial', '✓', '✓'],

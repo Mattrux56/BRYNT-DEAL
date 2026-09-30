@@ -3,6 +3,10 @@ import Header from './features/header'
 import Footer from './features/footer'
 import ContactModal from './features/contact-modal'
 import HomePage from './features/home'
+import ValueSection from './features/propuestavalor'
+import HeroSection from './features/hero'
+import KpiBand from './features/indicadores'
+import { TestimonialsSection } from './features/testimonials'
 
 export default function App() {
   const [modalOpen, setModalOpen] = useState(false)
@@ -21,7 +25,11 @@ export default function App() {
   return (
     <>
       <Header onOpenModal={() => openModal()} />
+      <HeroSection />
+      <KpiBand />
       <HomePage onOpenModal={openModal} />
+      <ValueSection />
+      <TestimonialsSection />
       <Footer />
       <ContactModal isOpen={modalOpen} onClose={handleCloseModal} initialPlan={selectedPlan} />
     </>

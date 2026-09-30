@@ -5,7 +5,6 @@ import paraCompradoresImg from '../../../assets/header_img/ParaCompradores.png'
 export const headerBrand = {
   logoSrc: logoHeaderImg,
   alt: 'BRYNT DEAL',
-  tagline: 'Commercial Growth as a Service',
   href: '#inicio',
 }
 
@@ -32,7 +31,7 @@ export const headerNavigation = [
         eyebrow: 'PARA COMPRADORES',
         title: 'Busco una solución',
         description:
-          'Encuentra productos y servicios confiables para llevar tus proyectos al siguiente nivel.',
+          'Encuentra productos y servicios confiables para llevar tus proyectos al siguiente nivel. ㅤㅤㅤㅤㅤㅤ' ,
         cta: 'Explorar soluciones',
         image: paraCompradoresImg,
       },

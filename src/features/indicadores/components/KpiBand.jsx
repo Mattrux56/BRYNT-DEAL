@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
-import { kpis } from '../constants/homeContent'
+import { kpis } from '../constants/kpiData'
+import '../styles/kpi.css'
 
 /**
  * Banda de indicadores KPI.

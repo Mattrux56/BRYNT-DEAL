@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import { footerColumns } from '../constants/footerData'
+import '../styles/footer.css'
 
 /**
  * Pie de página principal de la aplicación.

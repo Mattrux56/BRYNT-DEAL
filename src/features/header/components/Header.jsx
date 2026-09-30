@@ -2,15 +2,18 @@ import PropTypes from 'prop-types'
 import { headerBrand } from '../constants/headerData'
 import { useHeader } from '../hooks/useHeader'
 import HeaderNavItem from './HeaderNavItem'
+import '../styles/header.css'
 
 export default function Header({ onOpenModal }) {
   const {
     navItems,
     openDropdown,
+    mobileMenuOpen,
     handleToggle,
     handleCloseAll,
     handleLogoClick,
     handleScrollToTop,
+    toggleMobileMenu,
   } = useHeader()
 
   return (
@@ -22,7 +25,19 @@ export default function Header({ onOpenModal }) {
         <span className="hb-logo-tagline">{headerBrand.tagline}</span>
       </a>
 
-      <nav className="hb-nav" aria-label="Navegación principal">
+      <button
+        type="button"
+        className={`hb-mobile-toggle ${mobileMenuOpen ? 'is-open' : ''}`}
+        aria-label="Abrir menú"
+        aria-expanded={mobileMenuOpen}
+        onClick={toggleMobileMenu}
+      >
+        <span />
+        <span />
+        <span />
+      </button>
+
+      <nav className={`hb-nav ${mobileMenuOpen ? 'is-open' : ''}`} aria-label="Navegación principal">
         {navItems.map((item) => {
           if (item.type === 'simple') {
             return (
